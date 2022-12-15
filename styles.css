@@ -147,6 +147,11 @@ Burger Menu
   color: white;
 }
 
+.menu--open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .menu__links {
   display: flex;
   flex-direction: column;
@@ -258,6 +263,7 @@ Highlights
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #highlights:after,
@@ -288,7 +294,6 @@ Highlights
   width: calc(100% / 3);
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -313,6 +318,7 @@ Highlights
 .highlight__sub-title {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /* 
@@ -424,11 +430,47 @@ footer {
   padding: 0 12px;
 }
 
+/* Small Phones, Tablets, Large Smartphones */
+
+@media (max-width:768px) {
+  .header__description {
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%;
+  }
+  
+  
+  .highlight__wrapper {
+    width: 100%;
+  }
+}
+
 @media (max-width:550px) {
 .nav__section--links {
   display: none;
 }
 .btn__menu {
   display: block;
+}
+
+.highlight {
+  width: 100%;
+}
+
+.highlight:not(:last-child) {
+  margin-bottom: 24px;
 }
 }
